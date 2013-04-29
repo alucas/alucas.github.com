@@ -1,0 +1,5 @@
+section nav ul {
+	-webkit-flex-flow: row wrap; /* chrome */
+    flex-direction: column; /* firefox */
+    flex-wrap: wrap;
+}

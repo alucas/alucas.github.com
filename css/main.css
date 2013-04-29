@@ -99,10 +99,12 @@ p, h1 {
 
 header {
     display:-webkit-flex;
+    display:-moz-flex;
     display:flex;
 
     -webkit-flex-flow: column wrap;
-    flex-flow: column wrap;
+    flex-wrap: wrap;
+    flex-direction: column;
 
     padding: 10px;
 
@@ -131,6 +133,7 @@ header>* {
 
 header>#fullName {
     -webkit-order: 1;
+    -moz-order: 1;
     order: 1;
 
     font-family: Helvetica;
@@ -144,6 +147,7 @@ header>#fullName {
 
 header>#birthDate {
     -webkit-order: 2;
+    -moz-order: 2;
     order: 2;
 
     height: 50px;
@@ -151,6 +155,7 @@ header>#birthDate {
 
 header>#address {
     -webkit-order: 3;
+    -moz-order: 3;
     order: 3;
 
     text-align: right;
@@ -158,6 +163,7 @@ header>#address {
 
 header>#mobileNumber {
     -webkit-order: 4;
+    -moz-order: 4;
     order: 4;
 
     text-align: right;
@@ -165,6 +171,7 @@ header>#mobileNumber {
 
 header>#email {
     -webkit-order: 5;
+    -moz-order: 5;
     order: 5;
 
     text-align: right;
@@ -172,6 +179,7 @@ header>#email {
 
 header>#gitURL {
     -webkit-order: 6;
+    -moz-order: 6;
     order: 6;
 
     text-align: right;
@@ -199,10 +207,12 @@ section>h1 {
 
 section nav ul {
     display:-webkit-flex;
+    display:-moz-flex;
     display:flex;
 
     -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 section nav li {
