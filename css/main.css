@@ -210,9 +210,7 @@ section nav ul {
     display:-moz-flex;
     display:flex;
 
-    -webkit-flex-flow: row wrap;
-    flex-direction: column;
-    flex-wrap: wrap;
+    /* see shame.css */
 }
 
 section nav li {
