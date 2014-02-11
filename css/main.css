@@ -229,7 +229,7 @@ section nav li {
     font-style: italic;
 }
 
-.formations>li>.subTitle:before {
+.formations>li>.subTitle::before {
     content: "- ";
 }
 
@@ -249,7 +249,7 @@ section nav li {
     font-style: italic;
 }
 
-.formations .projects .language:before {
+.formations .projects .language::before {
     content: "- ";
 }
 
@@ -264,8 +264,8 @@ section nav li {
     font-weight: bold;
 }
 
-#comperencies .title:after {
-    content: " : ";
+#comperencies .title::after {
+    content: ": ";
 }
 
 #comperencies .reference {
@@ -282,15 +282,15 @@ section nav li {
     font-weight: bold;
 }
 
-#otherFormation .acronyme:before {
+#otherFormation .acronyme::before {
     content: " (";
 }
 
-#otherFormation .acronyme:after {
+#otherFormation .acronyme::after {
     content: ")"
 }
 
-#otherFormation .infos:before {
+#otherFormation .infos::before {
     content: " - ";
 }
 
@@ -302,8 +302,8 @@ section nav li {
     font-weight: bold;
 }
 
-#hobbies .title:after {
-    content: " : ";
+#hobbies .title::after {
+    content: ": ";
 }
 
 #experiences li {
@@ -312,7 +312,7 @@ section nav li {
     margin-bottom: 20px;
 }
 
-#experiences .personalProject:before {
+#experiences .personalProject::before {
     color: #1f4e79;
 
     content: "Projet personnel"
@@ -326,7 +326,7 @@ section nav li {
     color: #1f4e79;
 }
 
-#experiences .location:before {
+#experiences .location::before {
     content: " - ";
 }
 
@@ -334,7 +334,7 @@ section nav li {
     color: #1f4e79;
 }
 
-#experiences .duration:before {
+#experiences .duration::before {
     content: " - ";
 }
 
@@ -346,8 +346,8 @@ section nav li {
     border-top: 1px solid #1f4e79;
 }
 
-#experiences .object:before {
-    content: "Objet : ";
+#experiences .object::before {
+    content: "Objet: ";
 
     font-weight: bold;
 }
@@ -356,8 +356,8 @@ section nav li {
     display: block;
 }
 
-#experiences .technicalContext:before {
-    content: "Contexte technique : ";
+#experiences .technicalContext::before {
+    content: "Contexte technique: ";
 
     font-weight: bold;
 }
@@ -366,8 +366,8 @@ section nav li {
     display: block;
 }
 
-#experiences .source:before {
-    content: "Source(s) : ";
+#experiences .source::before {
+    content: "Source(s): ";
 
     font-weight: bold;
 }
@@ -376,8 +376,8 @@ section nav li {
     display: block;
 }
 
-#experiences .link:before {
-    content: "Lien(s) : ";
+#experiences .link::before {
+    content: "Lien(s): ";
 
     font-weight: bold;
 }
@@ -395,7 +395,15 @@ li {
     list-style-type: circle;
 }
 
+#experiences .others {
+    display: block;
+    margin-top: 20px;
+}
 
+#experiences .others li {
+    margin: 0;
+    list-style-type: disc;
+}
 
 
 
@@ -418,7 +426,7 @@ li {
     *text-indent: -9999px;
 }
 
-.ir:before {
+.ir::before {
     content: "";
     display: block;
     width: 0;
@@ -481,16 +489,16 @@ li {
  *    Otherwise it causes space to appear at the top and bottom of elements
  *    that receive the `clearfix` class.
  * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
+ *    `::before` to contain the top-margins of child elements.
  */
 
-.clearfix:before,
-.clearfix:after {
+.clearfix::before,
+.clearfix::after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
 
-.clearfix:after {
+.clearfix::after {
     clear: both;
 }
 
@@ -538,11 +546,11 @@ li {
         text-decoration: underline;
     }
 
-    a[href]:after {
+    a[href]::after {
         content: " (" attr(href) ")";
     }
 
-    abbr[title]:after {
+    abbr[title]::after {
         content: " (" attr(title) ")";
     }
 
@@ -550,9 +558,9 @@ li {
      * Don't show links for images, or javascript/internal links
      */
 
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
+    .ir a::after,
+    a[href^="javascript:"]::after,
+    a[href^="#"]::after {
         content: "";
     }
 
